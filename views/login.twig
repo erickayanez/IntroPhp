@@ -1,0 +1,26 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+<h1> Login Form </h1>
+<div class="alert alert-primary" role ="alert">
+  {{ responseMessage }}
+</div>
+<form class="form" action="/IntroPhp/auth" method="post">
+  <div class="control-group">
+    <fieldset>
+<div class="controls">
+  <input type="text" name="TxtUsuario" placeholder="Usuario">
+</div>
+<br>
+<div class="controls">
+<input type="password" name="contrasena"  placeholder="Contraseña">
+</div>
+<br>
+<div class="control-group">
+  <div class="controls">
+    <button type="submit"  class="btn" name="btnAceptar">Ingresar</button>
+  </div>
+</div>
+</fieldset>
+</form>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+<h1> Añade un Usuario </h1>
+<div class="alert alert-primary" role ="alert">
+  {{ responseMessage }}
+</div>
+<form class="form" action="/IntroPhp/user/add" method="post">
+  <div class="control-group">
+    <fieldset>
+  <label class="control-label" for="">Nombre Completo</label>
+  <div class="controls">
+    <input type="text" name="nombre" value="">
+  </div>
+  <br>
+  <label class="control-label">Usuario</label>
+<div class="controls">
+  <input type="text" name="TxtUsuario" value="">
+</div>
+<br>
+<label class="control-label">Contraseña</label>
+<div class="controls">
+<input type="password" name="contrasena" value="">
+</div>
+<br>
+<label class="control-label">E-mail</label>
+<div class="controls">
+<input type="text" name="email" value="">
+</div>
+<div class="control-group">
+  <div class="controls">
+    <button type="submit"  class="btn" name="btnAceptar">Guardar</button>
+  </div>
+</div>
+</fieldset>
+</form>
+{% endblock %}

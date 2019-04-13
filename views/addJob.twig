@@ -1,0 +1,32 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+<h1> Add Job </h1>
+<div class="alert alert-primary" role ="alert">
+  {{ responseMessage }}
+</div>
+<form class="form" action="/IntroPhp/job/add" method="post" enctype="multipart/form-data">
+  <div class="control-group">
+    <fieldset>
+  <legend>Añadir un empleo</legend>
+  <label class="control-label" for="">Titulo</label>
+  <div class="controls">
+    <input type="text" name="title" value="">
+  </div>
+  <br>
+  <label class="control-label">Descripción</label>
+<div class="controls">
+  <input type="text" name="description" value="">
+</div>
+<div class="controls">
+  <input type="file" name="logo">
+</div>
+</div>
+<div class="control-group">
+  <div class="controls">
+    <button type="submit"  class="btn" name="btnAceptar">Guardar</button>
+  </div>
+</div>
+</fieldset>
+</form>
+{% endblock %}
